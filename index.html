@@ -74,10 +74,44 @@ Add a paragraph element in the footer with some text/link about where the recipe
         </li>
       </ol>
     </section>
+    <section>
+      <form action ="/reviews" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
 
+        <br><br>
+
+        <label for="rating">Rating</label>
+        1<input type="radio" name="rating" value="1" checked>
+        2<input type="radio" name="rating" value="2">
+        3<input type="radio" name="rating" value="3">
+        4<input type="radio" name="rating" value="4">
+        5<input type="radio" name="rating" value="5">
+
+        <br><br>
+        <select id="expertise" name="expertise">
+         <option value="Select Cooking Expertise" disabled="true" selected="true">Select Cooking Experise</option>
+
+         <option value="Sometimes Cook">Sometimes Cook</option>
+
+         <option value="Cook Everyday">Cook Everyday</option>
+
+         <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+
+         <option value="Professional Chef">Professional Chef</option>
+        </select>
+
+        <br><br>
+
+        <label for="review"> <textarea name="review" cols="20" rows="10"></textarea></label>
+
+        <br>
+        <input type="submit" value="Submit Review">
+      </form>
+    </section>
     <footer>
       <p>
-        Original recipe found at: http://thewoksoflife.com/2014/04/shanghai-style-braised-pork-belly/
+        Original recipe found at: <a href="http://thewoksoflife.com/2014/04/shanghai-style-braised-pork-belly/">thewoksoflife.com</a>
       </p>
     </footer>
   </body>
