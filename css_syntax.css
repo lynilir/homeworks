@@ -1,0 +1,30 @@
+body {
+  /* If the user cannot load the Arial font, the sans-serif font is used */
+  font-family: Helvetica, sans-serif;
+  background-color: #a8491e;
+}
+
+header > img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ingredients-list {
+  list-style: square inside;
+}

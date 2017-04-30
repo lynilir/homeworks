@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 
-<!--
-Create a header section at the top
-Add an image of the app-academy logo within the header section
-Add a nav element within the header, after the logo
-Cut and paste your unordered list of anchor links into the nav section
-Add an aside element
-Cut and paste all of the ingredients elements into the aside
-Put the recipe image inside of a figure element
-Add a figurecaption element below the figure
-Cut the link to wikipedia from your description paragraph and paste it into the figcaption element
-Add a section element to contain the figure, description and instruction elements
-Add a footer element at the bottom
-Add a paragraph element in the footer with some text/link about where the recipe originated from. -->
 <html>
   <head>
     <meta charset="utf-8">
     <title>Yong Lin Recipe</title>
     <meta name="description" content="The best, easy recipe for delicious authentic Chinese foo. Pork belly braised with soy sauce is a very popular and hearty filling dish in Asia. ">
+    <link rel="stylesheet" href="./css_syntax.css" type="text/css">
+    <link rel="stylesheet" href="./css_reset.css" type="text/css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,7 +33,7 @@ Add a paragraph element in the footer with some text/link about where the recipe
     <aside>
       <a name="ingredients">
       <h2>Ingredients</h2>
-      <ul>
+      <ul class="ingredients-list">
         <li>¾ lb. of lean pork belly (cut into ¾-inch thick pieces)</li>
         <li>2 tablespoons oil</li>
         <li>1 tablespoon sugar (rock sugar is preferred if you have it)</li>
@@ -55,7 +44,7 @@ Add a paragraph element in the footer with some text/link about where the recipe
       </ul>
     </aside>
     <section>
-      <h1>Braised Pork Belly</h1>
+      <h1>Meat</h1>
 
       <figure>
         <img src="http://thewoksoflife.com/wp-content/uploads/2013/07/hongshao-rou-1.jpg" alt="Hong Shao Rou">
