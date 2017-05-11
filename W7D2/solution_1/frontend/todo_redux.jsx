@@ -13,14 +13,22 @@ import Root from './components/root';
 //     console.log(store.getState());
 //   };
 // };
-
+//
+// const addLoggingToDispatch = store => next => action => {
+//   let daDispatch = store.dispatch;
+//   console.log(store.getState());
+//   console.log(action);
+//   next(action);
+//   console.log(store.getState());
+//
+// };
 const addLoggingToDispatch = store => next => action => {
-  let daDispatch = store.dispatch;
+  const OGDispatch = store.dispatch;
   console.log(store.getState());
   console.log(action);
-  daDispatch(action);
+  let returnValue = OGDispatch(action);
   console.log(store.getState());
-  next(action);
+  return returnValue;
 };
 
 let applyMiddlewares = (store, ...midwares) =>{
