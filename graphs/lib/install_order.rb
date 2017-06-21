@@ -11,17 +11,45 @@ require_relative 'topological_sort'
 require_relative 'graph'
 
 def install_order(arr)
-  max_id = arr.flatten.max
+  # max_id = arr.flatten.max
   vertices = []
-  (1..max_id).each do |id|
+  arr.flatten.uniq.each do |id|
     ver = Vertex.new(id)
     vertices << ver
   end
 
   arr.each do |tuple|
-    id, dep = tuple
-    Edge.new(vertices[dep - 1], vertices[id - 1])
+    if tuple[1]
+      id, dep = tuple
+      Edge.new(vertices[dep - 1], vertices[id - 1])
+    end
   end
 
   topological_sort(vertices).map { |v| v.value }
 end
+
+
+# def install_order2(arr)
+#   vertices = []
+#   sorted = []
+#   arr.flatten.uniq.each do |val|
+#     ver = Vertex.new(val)
+#     vertices << ver
+#   end
+#
+#   arr.each do |tuple|
+#     if tuple[1]
+#       Edge.new(tuple[1], tuple[0])
+#     else
+#       sorted.push()
+#     end
+#   end
+#
+#   toposorted
+# end
+
+arr = [[3, 1], [2, 1], [6, 5], [3, 6], [3, 2], [4, 3], [9, 1], [1, nil], [5, nil]]
+arr2 = [['a', 'b'], ['c', 'b'], ['d', 'a'], ['b'], ['e', 'd']]
+
+p install_order(arr)
+p install_order(arr2)

@@ -24,10 +24,11 @@ def topological_sort(vertices)
     sorted.push(top_vertex)
   end
 
+  sorted.length == vertices.length ? sorted : []
   # needs to be a more robust check for cycle
-  if (in_edges_count.values.all? { |count| count == 0 })
-    return sorted
-  else
-    return []
-  end
+  # if (in_edges_count.values.all? { |count| count == 0 })
+  #   return sorted
+  # else
+  #   return []
+  # end
 end
